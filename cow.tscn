@@ -6,17 +6,18 @@
 [ext_resource type="AudioStream" uid="uid://ctdqgv1gpmfwg" path="res://touch_sound.mp3" id="3_uaxjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_digsg"]
-size = Vector2(68, 51)
+size = Vector2(146, 107.5)
 
 [node name="Cow" type="Area2D" unique_id=220529288]
 script = ExtResource("1_y5k1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1947910927]
-position = Vector2(0, 1.5)
+position = Vector2(-14, -29.75)
 shape = SubResource("RectangleShape2D_digsg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=918380286]
-scale = Vector2(0.19166668, 0.19166668)
+position = Vector2(-15, -31)
+scale = Vector2(0.4125, 0.4125)
 texture = ExtResource("1_m1w7b")
 
 [node name="SpawnSound" type="AudioStreamPlayer2D" parent="." unique_id=896957565]
