@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3uxw2mbxqj4e"]
+
+[ext_resource type="Texture2D" uid="uid://dbkinbvpi24uw" path="res://pngtree-holstein-cow-png-image_15744446.png" id="1_m1w7b"]
+[ext_resource type="Script" uid="uid://bpc8hffj7e6k6" path="res://cow.gd" id="1_y5k1g"]
+[ext_resource type="AudioStream" uid="uid://bu5e17l78pmjv" path="res://spawn_sound.mp3" id="2_y5k1g"]
+[ext_resource type="AudioStream" uid="uid://ctdqgv1gpmfwg" path="res://touch_sound.mp3" id="3_uaxjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_digsg"]
+size = Vector2(68, 51)
+
+[node name="Cow" type="Area2D" unique_id=220529288]
+script = ExtResource("1_y5k1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1947910927]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_digsg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=918380286]
+scale = Vector2(0.19166668, 0.19166668)
+texture = ExtResource("1_m1w7b")
+
+[node name="SpawnSound" type="AudioStreamPlayer2D" parent="." unique_id=896957565]
+stream = ExtResource("2_y5k1g")
+volume_db = 4.105
+
+[node name="TouchSound" type="AudioStreamPlayer2D" parent="." unique_id=2026607739]
+stream = ExtResource("3_uaxjc")
+volume_db = 7.298
